@@ -2,12 +2,14 @@
 
 #include <stdio.h>
 
-void main() {
-    int age;
+int main() {
+    void age;
     printf("Enter your age: ");
     scanf("%d", &age);
     
-    if (age >= 18) {
+    if (age < 0) {
+        printf("Invalid age! Age cannot be negative.\n");
+    } else if (age >= 18) {
         printf("You are eligible to vote.\n");
     } else {
         printf("You are not eligible to vote.\n");
