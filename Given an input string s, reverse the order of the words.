@@ -1,9 +1,9 @@
-#include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
-void reverseWords(char *s) {
+char* reverseWords(char *s) {
     int n = strlen(s);
-    char result[n + 1];
+    char *result = (char*)malloc(n + 1);
     int idx = 0;
 
     int i = n - 1;
@@ -30,12 +30,5 @@ void reverseWords(char *s) {
 
     result[idx] = '\0';
 
-    strcpy(s, result);
-}
-
-int main() {
-    char s[] = "  hello world  ";
-    reverseWords(s);
-    printf("%s\n", s);
-    return 0;
+    return result;
 }
